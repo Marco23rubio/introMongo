@@ -1,0 +1,8 @@
+use("sample_training") //conectarte a una BD
+
+db.zips.find({state: "NY"}).count() //contar cuantos documentos 
+//hay en la coleccion zips que tengan el campo state con el valor "NY"
+
+
+
+
