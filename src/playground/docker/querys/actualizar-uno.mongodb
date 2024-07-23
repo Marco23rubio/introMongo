@@ -1,0 +1,24 @@
+use("platzi_store")
+
+// db.products.updateOne(
+//     { _id:1 }, 
+//     {$set : {
+//         name: "Smartphone 20",
+//     }}
+// )
+
+// db.products.updateOne(
+//     { _id:1 }, 
+//     {$inc : {
+//         price: 500,
+//     }}
+// )
+
+db.products.updateOne(
+    { _id: ObjectId("66986bf83c5a34ad17372ce9") }, 
+    {$inc : {
+        price: 500,
+    }}
+)
+
+db.products.find().pretty()

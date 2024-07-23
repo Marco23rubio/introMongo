@@ -1,0 +1,5 @@
+use("platzi_store")
+
+db.inventory.find({"item.description": {$regex: /.*line*/i}}).pretty()
+
+

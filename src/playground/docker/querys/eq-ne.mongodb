@@ -1,0 +1,9 @@
+use("platzi_store")
+
+// db.inventory.find()
+
+// db.inventory.find({"item.name": "ab"})
+
+// db.inventory.find({"item.name": "ab", "item.code": "123"})
+
+db.inventory.find({"item.name": {$ne: "ab"}})

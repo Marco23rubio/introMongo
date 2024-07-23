@@ -1,0 +1,12 @@
+use("platzi_store")
+
+// $in
+
+// db.inventory.find({qty:{$in: [20,25]}})
+// db.inventory.find({tags:{$in: ["book","school"]}})
+// db.inventory.find({tags:{$nin: ["school","book"]}})
+
+//Exclusivo para arrays
+// db.inventory.find({tags:{$all: ["school","book"]}})
+// db.inventory.find({tags:{$size: 3}})
+db.survey.find({results:{$elemMatch:{product:"xyz"}}})

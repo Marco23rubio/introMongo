@@ -1,0 +1,37 @@
+use("sample_training");
+
+//AND implicito
+// db.inspections.find({
+//     sector: {$regex: "Tax Preparers.*"},
+//     result: "Unable to Locate"
+// }).count();
+
+//AND explicito
+// db.inspections.find({
+//     $and : [
+//         {sector: {$regex: "Tax Preparers.*"}},
+//         {result: "Unable to Locate"}
+//     ]
+// }).count();
+
+//OR
+// db.inspections.find({
+//     $or : [
+//         {sector: {$regex: "Tax Preparers.*"}},
+//         {result: "Unable to Locate"}
+//     ]
+// }).count();
+
+//NOR
+// db.inspections.find({
+//     $nor : [
+//         {sector: {$regex: "Tax Preparers.*"}},
+//         {result: "Unable to Locate"}
+//     ]
+// }).count();
+
+//not
+db.inspections.find({
+    sector: {$not: {$regex: "Tax Preparers.*"}}
+})
+

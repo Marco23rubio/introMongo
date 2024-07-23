@@ -1,0 +1,3 @@
+use("platzi_store") //conectarte a una BD
+
+db.products.find()
